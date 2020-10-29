@@ -1,0 +1,19 @@
+{
+  "name": "playing-cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "card.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node card.js",
+    "test": "mocha tests/**/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.0"
+  }
+}

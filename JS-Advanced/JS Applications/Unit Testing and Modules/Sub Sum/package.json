@@ -1,0 +1,16 @@
+{
+  "name": "sub-sum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "subsum.js",
+  "scripts": {
+    "start": "node subsum.js",
+    "test": "mocha tests/**/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.0"
+  }
+}

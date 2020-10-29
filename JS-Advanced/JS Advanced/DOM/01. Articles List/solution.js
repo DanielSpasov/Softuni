@@ -1,0 +1,23 @@
+function createArticle() {
+
+	let titleInputElement = document.getElementById('createTitle')
+	let contentInputElement = document.getElementById('createContent')
+
+	if (titleInputElement.value != '' && contentInputElement.value != '') {
+
+		let headingElement = document.createElement('h3')
+		headingElement.innerHTML = titleInputElement.value
+		titleInputElement.value = ''
+
+		let contentElement = document.createElement('p')
+		contentElement.innerHTML = contentInputElement.value
+		contentInputElement.value = ''
+	
+		let articleElement = document.createElement('article')
+		articleElement.appendChild(headingElement)
+		articleElement.appendChild(contentElement)
+	
+		let articleSectionElement = document.getElementById('articles')
+		articleSectionElement.appendChild(articleElement)
+	}
+}
