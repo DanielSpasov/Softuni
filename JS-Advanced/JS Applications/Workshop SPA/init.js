@@ -53,11 +53,13 @@ function onAddMovieSubmit(e) {
     let title = formData.get('title')
     let description = formData.get('description')
     let imageUrl = formData.get('imageUrl')
+    let likes = 0
 
     movieService.add({
         title,
         description,
-        imageUrl
+        imageUrl,
+        likes
     }).then(res => {
         navigate('home')
     })
@@ -82,14 +84,27 @@ function onEditMovieSubmit(e, id) {
     let title = formData.get('title')
     let description = formData.get('description')
     let imageUrl = formData.get('imageUrl')
-
-    movieService.editMovie(id, {
-        title,
-        description,
-        imageUrl
-    })
+    movieService.getOne(id)
         .then(res => {
-            navigate(`details/${id}`)
+            let likes = res.likes
+            movieService.editMovie(id, {
+                title,
+                description,
+                imageUrl,
+                likes
+            })
+                .then(navigate(`details/${id}`))
+        })
+
+}
+
+function likeMovie(e, id) {
+    e.preventDefault()
+
+    movieService.getOne(id)
+        .then(res => {
+            res.likes++
+            movieService.editMovie(id, res)
         })
 }
 

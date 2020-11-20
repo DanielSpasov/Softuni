@@ -102,5 +102,5 @@ const movieService = {
     async editMovie(id, movie) {
         let res = await request(`${databaseUrl}/movies/${id}.json`, 'PUT', movie)
         return res
-    }
+    },
 }
