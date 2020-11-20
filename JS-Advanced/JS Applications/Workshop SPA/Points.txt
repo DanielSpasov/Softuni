@@ -1,0 +1,16 @@
+Navbar ---------------- 5 Pts ----- DONE
+Home Page (Guest) ----- 5 Pts ----- DONE
+Register User --------- 5 Pts ----- DONE
+Login User ------------ 5 Pts ----- DONE
+Logout ---------------- 5 pts ----- DONE
+Home Page (Logged in) - 30 pts ---- DONE
+Add Movie ------------- 10 pts ---- DONE
+Details --------------- 15 pts ---- DONE
+Edit Movie ------------ 10 Pts ---- DONE
+Like Movie ------------ 10 Pts ---- NOT DONE
+Delete Movie ---------- 5 Pts ----- DONE
+(BONUS) Notifications - 5 Pts ----- NOT DONE
+(BONUS) Search -------- 5 Pts ----- NOT DONE
+
+Total: 95 Pts
+Maximum: 115 Pts
