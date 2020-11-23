@@ -1,0 +1,15 @@
+Navbar ------------------ 5 pts ----- DONE
+Home Page (Guest) ------- 5 pts ----- DONE
+Register ---------------- 5 pts ----- DONE
+Login ------------------- 5 pts ----- DONE
+Logout ------------------ 5 pts ----- DONE
+Home Page (Logged In) --- 30 pts ---- DONE
+Create Offer ------------ 10 pts ---- DONE
+Details ----------------- 15 pts ---- DONE
+Edit Offer -------------- 10 pts ---- DONE
+Buy Shoes --------------- 10 pts ---- DONE
+Delete Offer ------------ 5 pts ----- DONE
+(BONUS) Order ----------- 5 pts ----- NOT DONE
+
+Current Points: 105
+Maximum Points: 110
