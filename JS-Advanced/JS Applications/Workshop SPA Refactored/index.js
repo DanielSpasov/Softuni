@@ -57,7 +57,7 @@ const app = Sammy('#root', function () {
         }
 
         userModel.createUserWithEmailAndPassword(email, password)
-            .then(userData => {
+            .then(() => {
                 this.redirect('/login')
             })
             .catch(errorHandler)
@@ -170,9 +170,7 @@ const app = Sammy('#root', function () {
 
 });
 
-(() => {
-    app.run('/home')
-})()
+app.run('/home')
 
 function extendContext(context) {
 
@@ -203,6 +201,3 @@ function clearUserData() {
 function errorHandler(error) {
     console.log(error)
 }
-
-
-

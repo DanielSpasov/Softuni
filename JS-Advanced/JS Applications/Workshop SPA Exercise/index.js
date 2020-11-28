@@ -18,7 +18,7 @@ const app = Sammy('#root', function () {
 
                 extendContext(context)
                     .then(function () {
-                        this.partial('./templates/home.hbs')
+                        this.partial('templates/home.hbs')
                     })
             })
             .catch(errorHandler)
@@ -29,7 +29,7 @@ const app = Sammy('#root', function () {
     this.get('/register', function (context) {
         extendContext(context)
             .then(function () {
-                this.partial('./templates/register.hbs')
+                this.partial('templates/register.hbs')
             })
     })
     this.get('/login', function (context) {
@@ -199,9 +199,7 @@ const app = Sammy('#root', function () {
 
 });
 
-(() => {
-    app.run('/home')
-})()
+app.run('/home')
 
 function extendContext(context) {
 
@@ -210,8 +208,8 @@ function extendContext(context) {
     context.userEmail = user ? user.email : ''
 
     return context.loadPartials({
-        'header': './partials/header.hbs',
-        'footer': './partials/footer.hbs'
+        'header': 'templates/partials/header.hbs',
+        'footer': 'templates/partials/footer.hbs'
     })
 }
 
