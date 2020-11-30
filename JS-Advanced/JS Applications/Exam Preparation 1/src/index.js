@@ -1,7 +1,10 @@
+// Imports
+import { clearUserData, getUserData, saveUserData, extendContext, errorHandler } from './utility-functions.js'
 const userModule = firebase.auth()
 const database = firebase.firestore()
 
-// Router
+
+// Routing
 const app = Sammy('#root', function () {
 
     this.use('Handlebars', 'hbs')
@@ -34,7 +37,7 @@ const app = Sammy('#root', function () {
                     }
                 })
 
-                for(let lang of articlesData){
+                for (let lang of articlesData) {
                     result[categoryMap[lang.category]].push(lang)
                 }
 
@@ -73,11 +76,11 @@ const app = Sammy('#root', function () {
     this.post('/register', function (context) {
 
         const { email, password, rePassword } = context.params
-
+    
         if (password !== rePassword) {
             return
         }
-
+    
         userModule.createUserWithEmailAndPassword(email, password)
             .then(() => {
                 this.redirect('/login')
@@ -134,7 +137,7 @@ const app = Sammy('#root', function () {
                 const articleData = res.data()
                 const imTheCreator = articleData.creator === uid
 
-                context.article = { ...articleData, imTheCreator ,id: articleId }
+                context.article = { ...articleData, imTheCreator, id: articleId }
 
                 extendContext(context)
                     .then(function () {
@@ -175,7 +178,7 @@ const app = Sammy('#root', function () {
     })
     this.post('/edit/:articleId', function (context) {
 
-        const { articleId ,title, category, content } = context.params
+        const { articleId, title, category, content } = context.params
 
         database.collection('articles')
             .doc(articleId)
@@ -200,36 +203,3 @@ const app = Sammy('#root', function () {
 });
 
 app.run('/home')
-
-
-
-// Utility Functions
-function extendContext(context) {
-
-    const user = getUserData()
-    context.isLoggedIn = Boolean(user)
-    context.userEmail = user ? user.email : ''
-
-    return context.loadPartials({
-        'header': 'templates/partials/header.hbs',
-        'footer': 'templates/partials/footer.hbs'
-    })
-}
-
-function saveUserData(data) {
-    const { user: { email, uid } } = data
-    localStorage.setItem('user', JSON.stringify({ email, uid }))
-}
-
-function getUserData() {
-    let user = localStorage.getItem('user')
-    return user ? JSON.parse(user) : null
-}
-
-function clearUserData() {
-    this.localStorage.removeItem('user')
-}
-
-function errorHandler(error) {
-    console.log(error)
-}
