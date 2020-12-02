@@ -199,7 +199,6 @@ const app = Sammy('#root', function () {
             })
             .catch(errorHandler)
     })
-
 });
 
 app.run('/home')

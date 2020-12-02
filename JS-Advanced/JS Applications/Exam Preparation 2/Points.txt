@@ -1,0 +1,13 @@
+Navbar ----------------- 5 pts ----- DONE
+Register --------------- 5 pts ----- DONE
+Login ------------------ 5 pts ----- DONE
+Logout ----------------- 5 pts ----- DONE
+Home Page -------------- 40 pts ---- DONE
+Create post ------------ 10 pts ---- DONE
+Details ---------------- 15 pts ---- DONE
+Edit Article ----------- 10 pts ---- DONE
+Delete Post ------------ 5 pts ----- DONE
+(BONUS) Notifications -- 5 pts ----- NOT DONE
+
+Total Points: 100
+Maximum Points: 105
