@@ -1,10 +1,10 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyBshoyBBZpWjD2s9n-Ttiari2oBiK-r1XE",
-    authDomain: "spa-movies-refactored.firebaseapp.com",
-    databaseURL: "https://spa-movies-refactored.firebaseio.com",
-    projectId: "spa-movies-refactored",
-    storageBucket: "spa-movies-refactored.appspot.com",
-    messagingSenderId: "295297953541",
-    appId: "1:295297953541:web:57b3432e7a99f0389b916c"
-};
-firebase.initializeApp(firebaseConfig);
+    apiKey: "AIzaSyAk8plrDHadELFSu6JspbzQtBpYs1QeoqE",
+    authDomain: "spa-movies-82a85.firebaseapp.com",
+    projectId: "spa-movies-82a85",
+    storageBucket: "spa-movies-82a85.appspot.com",
+    messagingSenderId: "72158078932",
+    appId: "1:72158078932:web:9cc884d063487773631841"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
