@@ -1,0 +1,15 @@
+NavBar --------------------- 5 pts ---- DONE
+Register ------------------- 5 pts ---- DONE
+Login ---------------------- 5 pts ---- DONE
+Logout --------------------- 5 pts ---- DONE
+Home ----------------------- 5 pts ---- DONE
+Create Offer --------------- 15 pts --- DONE
+Dashboard ------------------ 25 pts --- DONE
+Edit ----------------------- 15 pts --- DONE
+Delete --------------------- 5 pts ---- DONE
+Details -------------------- 15 pts --- DONE
+(BONUS) Notifications ------ 5 pts ---- NOT DONE
+(BONUS) Buy Item / Profile - 5 pts ---- NOT DONE
+
+Total Points: 100
+Maximum Points: 110

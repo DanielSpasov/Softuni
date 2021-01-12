@@ -1,0 +1,15 @@
+NavBar ----------------------- 10 pts ----- DONE
+Home Page Guest -------------- 5 pts ------ DONE
+Register --------------------- 5 pts ------ DONE
+Login ------------------------ 5 pts ------ DONE
+Logout ----------------------- 5 pts ------ DONE
+Home Screen All Destinations - 20 pts ----- DONE
+Add Destination -------------- 10 pts ----- DONE
+Destination Details ---------- 10 pts ----- DONE
+Edit Destination ------------- 10 pts ----- DONE
+My Destinations -------------- 20 pts ----- DONE
+Delete Destination ----------- 5 pts ------ DONE
+(BONUS) Notifications -------- 10 pts ----- NOT DONE
+
+Total Points: 105
+Maximum Points: 115
