@@ -1,0 +1,16 @@
+{
+  "name": "nosql-and-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.13"
+  },
+  "author": "",
+  "license": "ISC"
+}
