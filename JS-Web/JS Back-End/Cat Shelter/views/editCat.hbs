@@ -1,0 +1,28 @@
+<header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/addBreed">Add Breed</a></li>
+            <li><a href="/addCat">Add Cat</a></li>
+        </ul>
+    </nav>
+    <h1>Cat Shelter</h1>
+</header>
+
+<form action="/editCat/{{this.cat.id}}" method="POST" class="cat-form" enctype="multipart/form-data">
+    <h2>Edit Cat</h2>
+    <label for="name">Name</label>
+    <input name="name" type="text" id="name" value="{{this.cat.name}}">
+    <label for="description">Description</label>
+    <textarea name="description" id="description">{{this.cat.description}}</textarea>
+    <label for="image">Image</label>
+    <input name="upload" type="file" id="image">
+    <label for="group">Breed</label>
+    <select name="breed" id="group">
+        <option value="{{this.cat.breed}}" selected>{{this.cat.breed}}</option>
+        {{#each this.breed}}
+        <option value="{{this.name}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+    <button>Edit Cat</button>
+</form>

@@ -1,0 +1,33 @@
+<header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="/">Home Page</a></li>
+            <li><a href="/addBreed">Add Breed</a></li>
+            <li><a href="/addCat">Add Cat</a></li>
+        </ul>
+    </nav>
+    <h1>Cat Shelter</h1>
+    <form action="/search">
+        <input type="text">
+        <button type="button">Search</button>
+    </form>
+</header>
+
+<main>
+    <section class="cats">
+        <ul>
+            {{#each cat}}
+            <li>
+                <img src="{{this.imagePath}}" alt="{{this.name}}">
+                <h3>{{this.name}}</h3>
+                <p><span>Breed: </span>{{this.breed}}</p>
+                <p><span>Description: </span>{{this.description}}</p>
+                <ul class="buttons">
+                    <li class="btn edit"><a href="/editCat/{{this.id}}">Change Info</a></li>
+                    <li class="btn delete"><a href="/catShelter/{{this.id}}">New Home</a></li>
+                </ul>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>
