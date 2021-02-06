@@ -14,14 +14,14 @@ const register = async ({ username, password }) => {
 
 const login = async ({ username, password }) => {
 
-    let user = await User.findOne({username})
+    let user = await User.findOne({ username })
 
-    if(!user) throw { message: 'User not found'}
+    if (!user) throw { message: 'User not found' }
 
     let isMatch = await bcrypt.compare(password, user.password)
-    if(!isMatch) throw { message: 'Password does not match'}
+    if (!isMatch) throw { message: 'Password does not match' }
 
-    let token = jwt.sign({ _id: user._id }, SECRET)
+    let token = jwt.sign({ _id: user._id, username: user.username, roles: ['admin'] }, SECRET)
 
     return token
 }

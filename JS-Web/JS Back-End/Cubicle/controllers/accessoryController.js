@@ -3,12 +3,15 @@ const router = Router()
 
 const accessoryService = require('../services/accessoryService')
 
-router.get('/create', (req, res) => {
+const isAuthenticated = require('../middlewares/isAuthenticated')
+const isGuest = require('../middlewares/isGuest')
+
+router.get('/create', isAuthenticated, (req, res) => {
     res.render('createAccessory', { title: 'Create Accessory' })
 })
 
 // TODO: Validate
-router.post('/create', (req, res) => {
+router.post('/create', isAuthenticated, (req, res) => {
     accessoryService.create(req.body)
         .then(() => res.redirect('/products'))
         .catch(() => res.status(500).end())
