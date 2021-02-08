@@ -5,7 +5,7 @@ const breedService = require('../services/breedService')
 const catService = require('../services/catService')
 
 router.get('/', (req, res) => {
-    catService.getAll()
+    catService.getAll(req.query)
         .then(cats => res.render('homePage', { title: 'Home page', cats }))
         .catch(error => res.render('homePage', { title: 'Error', error }))
 })

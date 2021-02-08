@@ -5,8 +5,13 @@ function create(data) {
     return cat.save()
 }
 
-function getAll() {
-    let cats = Cat.find({}).lean()
+async function getAll(query) {
+    let cats = await Cat.find({}).lean()
+
+    if (query.search) {
+        cats = cats.filter(x => x.name.includes(query.search))
+    }
+
     return cats
 }
 
