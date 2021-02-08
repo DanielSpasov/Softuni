@@ -17,7 +17,7 @@ router.get('/addBreed', (req, res) => {
 router.post('/addBreed', (req, res) => {
     breedService.create(req.body)
         .then(() => res.render('addBreed', { message: 'Breed added successfully!' }))
-        .catch(error => res.render('addBreed', { title: 'Error', error}))
+        .catch(error => res.render('addBreed', { title: 'Error', error }))
 })
 
 router.get('/addCat', (req, res) => {
@@ -30,6 +30,19 @@ router.post('/addCat', (req, res) => {
     catService.create(req.body)
         .then(() => res.redirect('/'))
         .catch(error => res.render('addCat', { title: 'Error', error }))
+})
+
+router.get('/editCat/:catId', async (req, res) => {
+    let breeds = await breedService.getAll()
+    catService.getOne(req.params.catId)
+        .then(cat => res.render('editCat', { title: 'Edit Cat', cat, breeds }))
+        .catch(error => res.render('editCat', { title: 'Error', error }))
+})
+
+router.post('/editCat/:catId', (req, res) => {
+    catService.updateCat(req.params.catId, req.body)
+        .then(() => res.redirect('/'))
+        .catch(error => res.render('editCat', { title: 'Error', error }))
 })
 
 module.exports = router

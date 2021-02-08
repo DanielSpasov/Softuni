@@ -6,8 +6,8 @@ const catController = require('./controllers/catController')
 
 router.use('/', catController)
 
-router.get('*', (req,res) => {
-    res.render('404', {title: 'Error 404'})
+router.get('*', (req, res) => {
+    res.render('404', { title: 'Error 404' })
 })
 
 

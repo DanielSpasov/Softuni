@@ -1,19 +1,23 @@
 <main>
-    <form action="/editCat/{{this.cat.id}}" method="POST" class="cat-form" enctype="multipart/form-data">
+    <form action="/editCat/{{cat._id}}" method="POST" class="cat-form">
         <h2>Edit Cat</h2>
         <label for="name">Name</label>
-        <input name="name" type="text" id="name" value="{{this.cat.name}}">
+        <input name="name" type="text" id="name" value="{{cat.name}}">
         <label for="description">Description</label>
-        <textarea name="description" id="description">{{this.cat.description}}</textarea>
-        <label for="image">Image</label>
-        <input name="upload" type="file" id="image">
+        <textarea name="description" id="description">{{cat.description}}</textarea>
+        <label for="image">ImageUrl</label>
+        <input type="text" id="image" name="imageUrl" value="{{cat.imageUrl}}"> 
         <label for="group">Breed</label>
         <select name="breed" id="group">
-            <option value="{{this.cat.breed}}" selected>{{this.cat.breed}}</option>
-            {{#each this.breed}}
-            <option value="{{this.name}}">{{this.name}}</option>
+            {{#each breeds}}
+            <option value="{{this.breed}}">{{this.breed}}</option>
             {{/each}}
         </select>
         <button>Edit Cat</button>
     </form>
 </main>
+
+{{!-- Front end level !!! NOT RECOMENDED !!! --}}
+<script>
+  document.querySelector(`option[value="{{cat.breed}}"]`).setAttribute('selected', 'true')
+</script>

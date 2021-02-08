@@ -5,12 +5,22 @@ function create(data) {
     return cat.save()
 }
 
-async function getAll() {
+function getAll() {
     let cats = Cat.find({}).lean()
     return cats
+}
+
+function getOne(id) {
+    return Cat.findById(id).lean()
+}
+
+function updateCat(id, data) {
+    return Cat.updateOne({ _id: id }, data)
 }
 
 module.exports = {
     create,
     getAll,
+    getOne,
+    updateCat,
 }
