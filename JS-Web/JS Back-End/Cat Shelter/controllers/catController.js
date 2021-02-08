@@ -45,4 +45,16 @@ router.post('/editCat/:catId', (req, res) => {
         .catch(error => res.render('editCat', { title: 'Error', error }))
 })
 
+router.get('/catShelter/:catId', (req, res) => {
+    catService.getOne(req.params.catId)
+        .then(cat => res.render('catShelter', { title: 'Cat Shelter', cat }))
+        .catch(error => res.render('catShelter', { title: 'Error', error }))
+})
+
+router.get('/delete/:catId', (req, res) => {
+    catService.deleteCat(req.params.catId)
+        .then(() => res.redirect('/'))
+        .catch(error => res.render('catShelter', { title: 'Error', error }))
+})
+
 module.exports = router

@@ -18,9 +18,14 @@ function updateCat(id, data) {
     return Cat.updateOne({ _id: id }, data)
 }
 
+function deleteCat(id) {
+    return Cat.deleteOne({ _id: id })
+}
+
 module.exports = {
     create,
     getAll,
     getOne,
     updateCat,
+    deleteCat,
 }
