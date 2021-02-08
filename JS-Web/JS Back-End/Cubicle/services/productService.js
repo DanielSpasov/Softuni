@@ -13,10 +13,10 @@ async function getAll(query) {
         products = products.filter(x => x.name.toLowerCase().includes(query.search))
     }
     if (query.from) {
-        products = products.filter(x => Number(x.level) >= query.from)
+        products = products.filter(x => Number(x.difficultyLevel) >= query.from)
     }
     if (query.to) {
-        products = products.filter(x => Number(x.level) <= query.to)
+        products = products.filter(x => Number(x.difficultyLevel) <= query.to)
     }
 
     return products

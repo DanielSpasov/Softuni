@@ -5,7 +5,6 @@ const productService = require('../services/productService')
 const accessoryService = require('../services/accessoryService')
 
 const isAuthenticated = require('../middlewares/isAuthenticated')
-const isGuest = require('../middlewares/isGuest')
 
 router.get('/', (req, res) => {
     productService.getAll(req.query)
@@ -28,7 +27,11 @@ router.post('/create', isAuthenticated, (req, res) => {
 
 router.get('/details/:productId', async (req, res) => {
     let product = await productService.getOneWithAccessories(req.params.productId)
-    res.render('details', { title: 'Details', product })
+    let isCreator = false
+    if (req.user) {
+        isCreator = req.user._id == product.creator
+    }
+    res.render('details', { title: 'Details', product, isCreator })
 })
 
 router.get('/:productId/attach', isAuthenticated, async (req, res) => {
