@@ -8,8 +8,11 @@ function create(data) {
 async function getAll(query) {
     let cats = await Cat.find({}).lean()
 
-    if (query.search) {
-        cats = cats.filter(x => x.name.includes(query.search))
+    if (query.name) {
+        cats = cats.filter(x => x.name.includes(query.name))
+    }
+    if (query.breed) {
+        cats = cats.filter(x => x.breed.includes(query.breed))
     }
 
     return cats
