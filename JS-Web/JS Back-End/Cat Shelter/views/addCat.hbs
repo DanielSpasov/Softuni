@@ -7,12 +7,16 @@
         <textarea name="description" id="description"></textarea>
         <label for="image">ImageUrl</label>
         <input type="text" id="image" name="imageUrl">
-        <label for="group">Breed</label>
-        <select name="breed" id="group">
+        <label for="breed">Breed</label>
+        <select name="breed" id="breed">
             {{#each breeds}}
-            <option value="{{this.name}}">{{this.breed}}</option>
+            <option value="{{this.breed}}">{{this.breed}}</option>
             {{/each}}
         </select>
         <button type="submit">Add Cat</button>
+
+        {{#if error}}
+        <span class="error">{{error._message}}</span>
+        {{/if}}
     </form>
 </main>

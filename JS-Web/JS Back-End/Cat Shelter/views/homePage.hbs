@@ -4,17 +4,22 @@
         <input type="text">
         <button type="button">Search</button>
     </form>
+
+    {{#if error}}
+        <span class="error">{{error._message}}</span>
+    {{/if}}
+
     <section class="cats">
         <ul>
-            {{#each cat}}
+            {{#each cats}}
             <li>
-                <img src="{{this.imagePath}}" alt="{{this.name}}">
+                <img src="{{this.imageUrl}}" alt="{{this.name}}">
                 <h3>{{this.name}}</h3>
                 <p><span>Breed: </span>{{this.breed}}</p>
                 <p><span>Description: </span>{{this.description}}</p>
                 <ul class="buttons">
-                    <li class="btn edit"><a href="/editCat/{{this.id}}">Change Info</a></li>
-                    <li class="btn delete"><a href="/catShelter/{{this.id}}">New Home</a></li>
+                    <li class="btn edit"><a href="/editCat/{{this._id}}">Change Info</a></li>
+                    <li class="btn delete"><a href="/catShelter/{{this._id}}">New Home</a></li>
                 </ul>
             </li>
             {{/each}}
