@@ -1,0 +1,19 @@
+<main>
+    <form action="/register" method="POST" class="auth-form">
+        <h2>Register</h2>
+        <label for="username">Username</label>
+        <input name="username" type="text" id="username">
+        <label for="password">Password</label>
+        <input name="password" type="password" id="password">
+        <label for="rePassword">Repeat Password</label>
+        <input name="rePassword" type="password" id="rePassword">
+        <button type="submit">Register</button>
+
+        {{#if message}}
+            <span class="notification">{{message}}</span>
+        {{/if}}
+        {{#if error}}
+            <span class="error">{{error.message}}</span>
+        {{/if}}
+    </form>
+</main>

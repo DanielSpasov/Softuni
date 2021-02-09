@@ -2,9 +2,9 @@ const { Router } = require('express')
 
 const router = Router()
 
-const catController = require('./controllers/catController')
+const mainController = require('./controllers/mainController')
 
-router.use('/', catController)
+router.use('/', mainController)
 
 router.get('*', (req, res) => {
     res.render('404', { title: 'Error 404' })

@@ -59,7 +59,7 @@ form {
     margin-top: 1rem;
 }
 
-input[type=text], input[type="file"], input[type="number"], textarea, select {
+input[type=text], input[type="file"], input[type="number"], input[type="password"],textarea, select {
     padding: 0.5rem 7.5rem 0.5rem 1rem;
     border-radius: 7px;
     border: none ;
@@ -269,6 +269,39 @@ span.notification {
     margin-top: 20px;
     overflow: hidden;
     display: block;
+}
+
+.auth-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 450px;
+    margin: auto;
+    margin-top: 2.5rem;
+}
+
+.auth-form h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.auth-form label {
+    margin: 0 0 0.3rem 0.3rem;
+}
+
+.auth-form button{
+    width: 100px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: lightskyblue;
+    margin-bottom: 1.5rem;
 }
 
 @-webkit-keyframes fadeOut {
