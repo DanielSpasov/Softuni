@@ -4,16 +4,29 @@ const cubeSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
+        minlength: 5,
+        validate: {
+            validator: (value) => {
+                return /^[a-zA-Z0-9\ ]+$/.test(value)
+            },
+            message: () => `Invalid cube name`
+        }
     },
     description: {
         type: String,
         required: true,
-        maxlength: 300,
+        minlength: 20,
+        validate: {
+            validator: (value) => {
+                return /^[a-zA-Z0-9\ ]+$/.test(value)
+            },
+            message: () => `Invalid cube description`
+        }
     },
     imageUrl: {
         type: String,
         required: true,
-        validate: /^https?/,
+        validate: /^https?:\/\//,
     },
     difficultyLevel: {
         type: Number,

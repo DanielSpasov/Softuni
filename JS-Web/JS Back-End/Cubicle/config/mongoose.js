@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 module.exports = (app) => {
     const uri = 'mongodb://localhost:27017/cubicle'
-    mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 
     const db = mongoose.connection
 

@@ -1,5 +1,6 @@
 const { Router } = require('express')
 const router = Router()
+const { check, validationResult } = require('express-validator')
 
 const authService = require('../services/authService')
 const { COOKIE_NAME } = require('../config/config')
@@ -31,13 +32,12 @@ router.post('/register', isGuest, async (req, res) => {
 
     const { username, password, repeatPassword } = req.body
 
-    if (password !== repeatPassword) {
-        return res.render('register', { message: 'Password Missmatch!' })
-    }
-
     try {
-        let user = await authService.register({ username, password })
+
+        if (password !== repeatPassword) throw { message: 'Password Missmatch' }
+        authService.register({ username, password })
         res.redirect('/auth/login')
+
     } catch (error) {
         res.render('register', { error })
     }

@@ -4,7 +4,6 @@ const router = Router()
 const accessoryService = require('../services/accessoryService')
 
 const isAuthenticated = require('../middlewares/isAuthenticated')
-const isGuest = require('../middlewares/isGuest')
 
 router.get('/create', isAuthenticated, (req, res) => {
     res.render('createAccessory', { title: 'Create Accessory' })
