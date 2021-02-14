@@ -25,7 +25,6 @@ router.post('/create', isAuthenticated, (req, res) => {
             let error = Object.keys(err?.errors).map(x => ({ message: err.errors[x].message }))[0]
             res.render('create', { title: 'Add Cube', error, cubeData: req.body })
         })
-
 })
 
 router.get('/details/:productId', async (req, res) => {

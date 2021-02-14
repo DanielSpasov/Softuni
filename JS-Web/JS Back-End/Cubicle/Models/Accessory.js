@@ -10,7 +10,7 @@ const accessorySchema = new mongoose.Schema({
             validator: (value) => {
                 return /^[a-zA-Z0-9\ ]+$/.test(value)
             },
-            message: () => `Invalid cube name`
+            message: () => `Invalid accessory name`
         }
     },
     description: {
@@ -19,9 +19,9 @@ const accessorySchema = new mongoose.Schema({
         minlength: 20,
         validate: {
             validator: (value) => {
-                return /^[a-zA-Z0-9\ ]+$/.test(value)
+                return /^[a-zA-Z0-9\ \,\.\?\!]+$/.test(value)
             },
-            message: () => `Invalid cube description`
+            message: () => `Invalid accessory description`
         }
     },
     imageUrl: {
