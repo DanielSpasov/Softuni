@@ -21,7 +21,10 @@ router.get('/create', isAuthenticated, (req, res) => {
 router.post('/create', isAuthenticated, (req, res) => {
     productService.createItem(req.body, req.user._id)
         .then(() => res.redirect('/products'))
-        .catch(() => res.status(500).end())
+        .catch(err => {
+            let error = Object.keys(err?.errors).map(x => ({ message: err.errors[x].message }))[0]
+            res.render('create', { title: 'Add Cube', error, cubeData: req.body })
+        })
 
 })
 
