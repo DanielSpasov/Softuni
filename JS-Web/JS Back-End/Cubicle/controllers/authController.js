@@ -13,14 +13,19 @@ router.get('/login', isGuest, (req, res) => {
 })
 
 router.post('/login', isGuest, async (req, res) => {
+
     const { username, password } = req.body
 
     try {
+
         let token = await authService.login({ username, password })
+            .catch(err => { throw { message: 'Invalid Username or Password' } })
+
         res.cookie(COOKIE_NAME, token)
         res.redirect('/products')
+
     } catch (error) {
-        res.render('login', { error })
+        res.render('login', { title: 'Login', error })
     }
 })
 
@@ -32,14 +37,18 @@ router.post('/register', isGuest, async (req, res) => {
 
     const { username, password, repeatPassword } = req.body
 
+    if (password !== repeatPassword) {
+        return res.render('register', { error: { message: 'Password missmatch' } })
+    }
+
     try {
 
-        if (password !== repeatPassword) throw { message: 'Password Missmatch' }
-        authService.register({ username, password })
+        let user = await authService.register({ username, password })
         res.redirect('/auth/login')
 
-    } catch (error) {
-        res.render('register', { error })
+    } catch (err) {
+        let error = Object.keys(err?.errors).map(x => ({ message: err.errors[x].message }))[0]
+        res.render('register', { title: 'Register', error })
     }
 })
 

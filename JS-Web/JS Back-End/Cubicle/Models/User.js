@@ -13,7 +13,9 @@ const userSchema = new mongoose.Schema({
             validator: (value) => {
                 return /^[a-zA-Z0-9]+$/.test(value)
             },
-            message: () => `Invalid Username`
+            message: () => {
+                return `Invalid Username`
+            }
         }
     },
     password: {
@@ -24,7 +26,9 @@ const userSchema = new mongoose.Schema({
             validator: (value) => {
                 return /^[a-zA-Z0-9]+$/.test(value)
             },
-            message: () => `Invalid Password`
+            message: () => {
+                return `Invalid Password`
+            }
         }
     }
 })

@@ -14,7 +14,7 @@ const login = async ({ username, password }) => {
     if (!user) throw { message: 'User not found' }
 
     let isMatch = await bcrypt.compare(password, user.password)
-    if (!isMatch) throw { message: 'Password does not match' }
+    if (!isMatch) throw { message: 'Wrong Password' }
 
     let token = jwt.sign({ _id: user._id, username: user.username, roles: ['admin'] }, SECRET)
     return token
