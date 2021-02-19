@@ -1,0 +1,21 @@
+<main>
+    <h1>Welcome to SoftUni Wiki!</h1>
+    <section id="featured">
+        {{#if articles}}
+            <h2>Latests articles</h2>
+        {{/if}}
+
+        {{#each articles}}
+            <article>
+                <h3>{{this.title}}</h3>
+                <p>{{this.content}}...</p>
+                <div class="controls">
+                    <a href="/article/{{this._id}}/readMore">Read more</a>
+                </div>
+            </article>
+        {{else}}
+            <h2>No articles found</h2>
+        {{/each}}
+
+    </section>
+</main>
