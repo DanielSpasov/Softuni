@@ -1,0 +1,66 @@
+<main>
+
+    <section class="actions">
+        <form action="/user/{{user._id}}/refill" method="POST">
+            <h2>Salary time? Refill your account amount.</h2>
+            <input type="text" id="refill-amount" name="amount">
+            <button type="submit">Refill</button>
+        </form>
+        <div>
+            <h2>New expense comming up?</h2>
+            <a href="/expenses/create">Add it now</a>
+        </div>
+    </section>
+
+    <hr class="separator">
+
+    {{#if expenses}}
+
+    <table class="expenses">
+        <thead>
+            <tr>
+                <th>Merchant</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Description</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {{#each expenses}}
+            <tr>
+                <td>
+                    <p>{{this.merchant}}</p>
+                    {{#if this.report}}
+                    <div class="report">
+                        <a href="/expenses/{{this._id}}/report">Report</a>
+                    </div>
+                    {{/if}}
+                </td>
+                <td>
+                    <img src="static/images/amount.png" alt="">
+                    <p>{{this.total}} лв.</p>
+                </td>
+                <td>
+                    <img src="static/images/category.png" alt="">
+                    <p>{{this.category}}</p>
+                </td>
+                <td>
+                    <img src="static/images/hastag.png" alt="">
+                    <p>{{this.description}}</p>
+                </td>
+            </tr>
+
+            {{/each}}
+            
+
+        </tbody>
+    </table>
+
+    {{else}}
+        <h1 class="no-expenses">No expenses founded so far.. <span>GOOD JOB!</span></h1>
+    {{/if}}
+
+</main>
