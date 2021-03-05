@@ -5,7 +5,7 @@ class Counter extends Component {
         super(props)
 
         this.state = {
-            count: 11
+            count: 0
         }
 
         this.resetCounter = this.resetCounter.bind(this)
@@ -27,11 +27,12 @@ class Counter extends Component {
 
     render() {
         return (
-            <div>
-                <h3>Book Counter</h3>
+            <div className="counter">
+                <h2>Counter</h2>
                 <button onClick={(e) => this.decrementCounter(e)}>-</button>
                 <span>{this.state.count}</span>
-                <button onClick={this.incrementCounter.bind(this)}>+</button>
+                <button onClick={(e) => this.incrementCounter(e)}>+</button>
+                <br></br>
                 <button onClick={this.resetCounter}>Reset</button>
             </div>
         )

@@ -1,7 +1,7 @@
 function Navbar(props) {
     return (
         <div className="navbar">
-            <h1>Home</h1>
+            <a href="/">Home</a>
             <div>
                 <a href="/about">About</a>
                 <a href="/user/login">Login</a>

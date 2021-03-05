@@ -20,7 +20,6 @@ class Booklist extends Component {
                     return <Book
                         title={x.title}
                         description={x.description}
-                        // clickHandler={this.bookClicked.bind(this, x.title)}
                         clickHandler={() => this.bookClicked(x.title)}
                     />
                 })}

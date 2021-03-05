@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import Search from './components/Search';
 import Booklist from './components/Booklist';
 import Counter from './components/Counter';
 
@@ -14,10 +15,11 @@ function App() {
     return (
         <div className="site-wrapper">
             <Navbar />
-
-            <Counter />
+            <Search />
 
             <Booklist books={booksData} />
+
+            <Counter />
         </div>
     );
 }
