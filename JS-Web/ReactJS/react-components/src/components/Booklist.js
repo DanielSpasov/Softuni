@@ -13,10 +13,6 @@ class Booklist extends Component {
         }
     }
 
-    bookClicked(title) {
-        console.log(`The book ${title} has been added to basket`)
-    }
-
     componentDidMount() {
         bookService.getAll()
             .then(books => this.setState({books}))
@@ -28,12 +24,12 @@ class Booklist extends Component {
             <div className={style.booklist}>
                 <h2>Our Book Collection</h2>
 
-                {this.state.books?.map(x =>
+                {this.state.books.map(x =>
                     <Book
-                        key={x.id}
+                        key={x._id}
                         title={x.title}
                         description={x.description}
-                        clickHandler={() => this.bookClicked(x.title)}
+                        author={x.author}
                     />
                 )}
             </div>
