@@ -1,6 +1,8 @@
+import style from './Navbar.module.css'
+
 function Navbar(props) {
     return (
-        <div className="navbar">
+        <div className={style.navbar}>
             <a href="/">Home</a>
             <div>
                 <a href="/about">About</a>
