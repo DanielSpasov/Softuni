@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import Book from './Book'
-import style from './Booklist.module.css'
+import style from './styles/Booklist.module.css'
 import bookService from '../services/bookService'
 
 
@@ -15,7 +15,7 @@ class Booklist extends Component {
 
     componentDidMount() {
         bookService.getAll()
-            .then(books => this.setState({books}))
+            .then(books => this.setState({ books }))
             .catch(err => console.log(err))
     }
 
@@ -23,8 +23,7 @@ class Booklist extends Component {
         return (
             <div className={style.booklist}>
                 <h2>Our Book Collection</h2>
-
-                {this.state.books.map(x =>
+                {this.state.books?.map(x =>
                     <Book
                         key={x._id}
                         title={x.title}

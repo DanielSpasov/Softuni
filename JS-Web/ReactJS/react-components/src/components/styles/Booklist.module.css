@@ -1,0 +1,8 @@
+.booklist {
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  font-family: 'Verdana';
+  overflow: auto;
+}

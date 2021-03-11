@@ -1,4 +1,4 @@
-import style from './Book.module.css'
+import style from './styles/Book.module.css'
 
 function Book(props) {
     return (
