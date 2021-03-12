@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "content": "Base Post Title",
+      "author": "Base Post Author"
+    },
+    {
+      "id": 2,
+      "content": "My title is big",
+      "author": "Author is me"
+    },
+    {
+      "id": 3,
+      "content": "JS is easy to write",
+      "author": "Nobody"
+    },
+    {
+      "id": 4,
+      "content": "JS something idk",
+      "author": "SoftUni"
+    },
+    {
+      "id": 5,
+      "content": "Post Title go brrr",
+      "author": "author skrr"
+    }
+  ]
+}
