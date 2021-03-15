@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import { Route, Link, NavLink, Redirect, Switch } from 'react-router-dom'
 
 import postService from './services/postService'
 
@@ -19,7 +20,7 @@ class App extends Component {
     componentDidMount() {
         postService.getAll()
             .then(posts => {
-                this.setState({posts})
+                this.setState({ posts })
             })
     }
 
@@ -31,7 +32,14 @@ class App extends Component {
                 <div className={style.container}>
                     <components.Menu />
 
-                    <components.Main posts={this.state.posts} />
+                    <Switch>
+                        <Route path="/about/:name" component={components.About} exact/>
+                        <Route path="/contactus" component={components.Contactus} exact/>
+                        <Route path="/" exact>
+                            <components.Main posts={this.state.posts} />
+                        </Route>
+                    </Switch>
+
                 </div>
             </div>
         );
