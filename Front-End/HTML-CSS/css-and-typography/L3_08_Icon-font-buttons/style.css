@@ -1,0 +1,15 @@
+@import url('https://use.fontawesome.com/releases/v5.15.2/css/all.css');
+
+#click-me {
+    background: green;
+    color: white;
+    border-radius: 2px;
+    padding: 8px;
+}
+
+#email-me {
+    background: orange;
+    color: white;
+    border-radius: 2px;
+    padding: 8px;
+}
