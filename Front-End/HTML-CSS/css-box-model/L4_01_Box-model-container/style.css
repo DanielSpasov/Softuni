@@ -1,0 +1,8 @@
+body p {
+    width: 200px;
+    padding: 8px;
+    margin: 16px auto;
+    border: 5px solid;
+    border-radius: 5px;
+    background: rgb(64, 224, 208);
+}

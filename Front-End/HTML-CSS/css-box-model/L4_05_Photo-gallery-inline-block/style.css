@@ -1,0 +1,9 @@
+.gallery {
+    border-width: 0.4rem;
+    border-color: black;
+    border-style: solid;
+}
+
+.gallery li {
+    display: inline-block;
+}
