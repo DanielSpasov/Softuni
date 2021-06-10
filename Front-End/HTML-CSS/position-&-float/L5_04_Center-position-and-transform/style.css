@@ -1,0 +1,22 @@
+body {
+    background: rgb(238, 238, 238)
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25);
+    background: rgb(255, 255, 255);
+}
+
+.card button {
+    background: rgb(0, 153, 0);
+}
+
+img {
+    position: absolute;
+}
+
+.card h1 {
+    font-family: Georgia, serif;
+    font-size: 1em;
+}

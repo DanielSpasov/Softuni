@@ -1,0 +1,35 @@
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+}
+
+.site-title {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+blockquote {
+    float: right;
+    border-left: 1px solid gray;
+    color: gray;
+    padding: 8px;
+    width: 300px;
+}
+
+blockquote span {
+    float: right;
+}
+
+.picture-1 {
+    border: 2px solid black;
+    float: right;
+    padding: 5px;
+}
+
+.picture-2 {
+    border: 2px solid black;
+    float: left;
+    padding: 5px;
+}

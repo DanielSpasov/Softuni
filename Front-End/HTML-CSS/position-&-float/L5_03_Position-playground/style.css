@@ -1,0 +1,12 @@
+@import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+
+.viewport {
+    background: lightseagreen;
+    position: absolute;
+}
+
+.card {
+    background: lightgreen;
+    display: block;
+    position: absolute;
+}
