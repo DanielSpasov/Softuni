@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 65vw;
+}
+
+.week {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    flex: 5 5 100%;
+}
+
+.notes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+span {
+    border: 1px solid black;
+    flex: 1 1 1px;
+    text-align: center;
+    height: 70px;
+    padding: 8px;
+}

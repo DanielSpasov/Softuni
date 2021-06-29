@@ -1,0 +1,14 @@
+body {
+    display: flex;
+
+}
+
+.gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    display: flex;
+
+}
