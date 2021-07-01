@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+@import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica, sans-serif;
+}
+
+nav {
+    background: rgb(65, 190, 173);
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+#softuni-kids-logo {
+    margin: 7px;
+}
+.nav-links {
+    list-style-type: none;
+    font-weight: bold;
+    display: flex;
+}
+.nav-links li a {
+    padding: 0px 8px 0px 8px;
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background: rgb(255, 180, 2);
+    align-items: center;
+}
+header h1 {
+    color: white;
+    margin: 0px;
+    text-align: center;
+    padding: 45px 0px 20px 0px;
+}
+header p {
+    color: white;
+    margin: 0px 32vw 0px 32vw;
+    max-width: 36vw;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.first-two {
+    display: flex;
+    margin: 100px 10% 0px 10%;
+}
+.first-two div {
+    display: flex;
+}
+.first-two div img {
+    height: 200px;
+    width: 200px;
+    border: 6px solid rgb(65, 190, 173);
+    border-radius: 50%;
+    margin: 20px;
+}
+.first-two div div {
+    margin: 20px;
+    display: block;
+}
+.first-two div div h3 {
+    color: rgb(65, 190, 173);
+    display: block;
+}
+.first-two div div span {
+    color: gray;
+    display: block;
+}
+
+.others {
+    display: flex;
+    margin: 10%;
+}
+.others div {
+    flex-grow: 1;
+    text-align: center;
+}
+.others div h3 {
+    color: rgb(65, 190, 173);
+}
+.others div span {
+    color: gray;
+}
+.others div img {
+    height: 200px;
+    width: 200px;
+    border: 6px solid rgb(65, 190, 173);
+    border-radius: 50%;
+}
+
+.blue-section {
+    background: rgb(102, 185, 248);
+    border-top: 10px solid rgb(146, 205, 251);
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 120px;
+}
+.blue-section h2 {
+    color: white;
+}
+.blue-section p {
+    color: white;
+    width: 60%;
+    margin: 0px 20% 0px 20%;
+    padding-bottom: 35px;
+}
+.blue-section input {
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    background: transparent;
+}
+.blue-section input::placeholder {
+    color: white;
+}
+.blue-section button {
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px 12px 20px;
+    margin-left: 30px;
+    box-shadow: 0px 0px 5px 1px rgb(76, 76, 76);
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    background: rgb(86, 86, 86);
+    color: white;
+    border-top: 10px solid gray;
+    padding: 0px 10% 0px 10%;
+}
+footer ul {
+    box-sizing: border-box;
+    flex: 1 1 20%;
+    margin: 0px 0px 25px 0px;
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
+}
+footer ul li {
+    padding: 4px 0px 4px 0px;
+}
+footer ul h5 {
+    font-size: 15px;
+}
+.icons-list li {
+    display: inline;
+    padding: 0px 4px 0px 4px;
+}
+.fa-facebook-f,
+.fa-instagram {
+    font-size: 25px;
+}
