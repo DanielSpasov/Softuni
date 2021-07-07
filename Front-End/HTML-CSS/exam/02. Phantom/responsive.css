@@ -1,0 +1,101 @@
+@media (min-width: 600px) and (max-width: 900px) {
+    .inner header h1 br {
+        display: none;
+    }
+
+    .inner header h1 {
+        font-size: 40px;
+    }
+
+    .inner header p {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .tiles {
+        flex-direction: row;
+        margin-top: 0px;
+    }
+
+    .tiles article {
+        width: auto;
+        flex: 1 1 40%;
+    }
+
+    section.inner h2 {
+        font-size: 20px;
+    }
+
+    #footer .inner section:nth-child(1) {
+        width: 65%;
+        margin-right: 0px;
+        font-size: 10px;
+        font-size: 15px;
+    }
+
+    #footer .inner section:nth-child(2) {
+        font-size: 15px;
+        margin-left: 5%;
+        width: 30%;
+    }
+
+    section.inner .icons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    section.inner .icons li {
+        padding-top: 5px;
+    }
+
+    .fields div {
+        padding: 0px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #wrapper > * > .inner {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .inner header h1 {
+        font-size: 30px;
+    }
+
+    .inner header p {
+        font-size: 17px;
+    }
+
+    .tiles article {
+        width: auto;
+    }
+
+    #footer .inner {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #footer .inner section:nth-child(1),
+    #footer .inner section:nth-child(2) {
+        margin: 0px;
+        width: 100%;
+    }
+
+    #footer .icons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        font-size: 17px;
+    }
+
+    #footer .fields div {
+        display: block;
+        width: 100%;
+    }
+
+    #footer .actions,
+    #footer .actions li,
+    #footer .actions input {
+        width: 100%;
+    }
+}
